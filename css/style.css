@@ -1,3 +1,7 @@
+body
+{
+    background-color: bisque;
+}
 body h1 i
 {
     color: crimson;
@@ -7,15 +11,76 @@ a
     text-align: right;
     font-size:xx-large;
     color: rgb(60, 10, 179);
+
 }
-table, th, td {
-    border: 1px solid black;
+.Seattle
+{
+    
+    font-size: x-large;
+    color: rgb(255, 0, 157);
+    background-color: rgb(46, 132, 161);
+    border-radius: 150px;
+    padding: 0 90px;
+    
 }
-td{
-    display: table-cell;
-    vertical-align: inherit;
+.Seattle p{
+    background-color: lightblue;
+    border-radius: 110px;
+    padding: 0 30px;
 }
-tr{
-    display: table-row;
-    border-color: inherit;
+.Tokyo
+{
+    font-size: x-large;
+    color:green;
+    background-color: rgb(93, 165, 93);
+    border-radius: 150px;
+    padding: 0 90px;
+}
+.Tokyo p{
+    background-color: lightblue;
+    border-radius: 110px;
+    padding: 0 30px;
+}
+.Dubai
+{
+    font-size: x-large;
+    color:rgb(8, 197, 87);
+    
+    background-color:yellow;
+    border-radius: 150px;
+    padding: 0 90px;
+}
+.Dubai p{
+    background-color: lightblue;
+    border-radius: 110px;
+    padding: 0 30px;
+}
+.Paris
+{
+    font-size: x-large;
+    color:rgb(15, 88, 170);
+    
+    background-color: rgb(46, 132, 161);
+    border-radius: 150px;
+    padding: 0 90px;
+}
+.Paris p{
+    background-color: lightblue;
+    border-radius: 110px;
+    padding: 0 30px;
+}
+
+.Lima
+{
+    font-size: x-large;
+    color:rgb(226, 25, 193);
+    background-color: rgb(32, 23, 11);
+    border-radius: 150px;
+    padding: 0 90px;
+}
+ .Lima p{
+    background-color: lightblue;
+    border-radius: 110px;
+    padding: 0 10px;
+  
 }

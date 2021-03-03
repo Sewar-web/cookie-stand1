@@ -85,10 +85,13 @@ function createTableFooter(objects )
     for(let t=0; t < objects.length ; t++)
     {
       totalOfTotal+=objects[t].salesArray[k];
-      sum += objects[t].total;
     }
     th1Element.textContent=totalOfTotal;
   }
+  for (let s = 0; s < objects.length; s++) {
+    sum += objects[s].total;
+  }
+
   const th2Element = document.createElement('th');
   tr1Element.appendChild(th2Element);
   th2Element.textContent=sum;
@@ -100,10 +103,28 @@ const Tokyo = new Salmon('Tokyo' , 3 , 24 , 1.2 );
 const Dubai = new Salmon('Dubai' , 11 , 38 , 7.3 );
 const Paris = new Salmon('Paris' , 20 , 38 , 2.3 );
 const Lima = new Salmon('Lima' , 2 , 16 , 4.6 );
-let objects=[Seattle , Tokyo , Dubai , Paris , Lima];
+let objects=[Seattle , Tokyo , Dubai , Paris , Lima ];
 createTebleHeader();
 
+const formElement = document.getElementById('addNewCountryForm');
 
+formElement.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const countryName = event.target.country_name.value;
+  const minCustomrs = event.target.min_customrs.value;
+  const maxCustomrs = event.target.max_customrs.value;
+  const avgCookies = event.target.avg_cookies.value;
+  const newCity = new Salmon(countryName , minCustomrs , maxCustomrs , avgCookies);
+  objects.push(newCity);
+  formElement.reset();
+  newCity.gitNum();
+  newCity.gitCookiesEachHour();
+  document.querySelector( 'table tr:last-child' ).remove();
+  newCity.render();
+  console.log(Salmon.objects);
+  createTableFooter(objects);
+});
 Seattle.gitNum();
 Seattle.gitCookiesEachHour();
 console.log(Seattle);
@@ -132,5 +153,4 @@ Lima.gitNum();
 Lima.gitCookiesEachHour();
 console.log(Lima);
 Lima.render();
-
 createTableFooter(objects);
