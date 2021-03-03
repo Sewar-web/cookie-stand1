@@ -1,4 +1,4 @@
-table, th, td {
+/* table, th, td {
     border: 1px solid black;
 }
 td{
@@ -8,4 +8,62 @@ td{
 tr{
     display: table-row;
     border-color: inherit;
+} */
+body
+{
+    width: 700px;
+    background-color: rgb(0, 183, 255);
 }
+a{
+    font-size: xx-large;
+    color: indigo;
+    background-color: rgb(252, 92, 0);
+    border-radius: 110px;
+    padding: 0 30px;
+}
+table, td, th {  
+    width: 50%;
+    border: 1px solid #ddd;
+    text-align: left;
+    /* background-color: rgb(11, 214, 21); */
+  }
+
+  table {
+       width: 70%;
+    border-collapse: collapse;
+    background-color:rgb(139, 23, 139)
+  }
+ 
+  th, td {
+    border: 1px solid black;
+    padding: 9px;
+  }
+  img{
+      width: 80%;
+      display: block;
+     margin-right: 50%;
+     margin-left: 50%;
+    
+  }
+  form{
+    width: 100%;
+  }
+  legend
+  {
+    background-color: rgb(55, 245, 17);
+    padding: 10px;
+    border-radius: 0 60px;
+  }
+
+  fieldset
+  {
+    font-style: italic;
+    font-size: larger;
+    width: 100%;
+   background-color: rgb(248, 245, 53);
+  }
+  input
+  {
+    display: block;
+    font-style: oblique;
+  }
